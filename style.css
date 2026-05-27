@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+:root {
+    --overlay-color: rgba(116, 148, 255, 0.5);
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Serif Display', sans-serif;
+}
+
+.showcase {
+    position: relative;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    z-index: 2;
+    transition: 0.5s;
+}
+
+.showcase.active {
+    right: 300px;
+}
+.showcase header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url("Nya-awrts/white\ close\ icon.png") no-repeat center; 
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+}
+
+
+.toggle.active {
+    background: url("Nya-awrts/home-button-white-icon.png") no-repeat center; 
+    background-size: 30px;
+    background-position: center;
+}
+
+
+.showcase video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(129, 85, 133);
+    mix-blend-mode: overlay;
+}
+
+.text {
+   position: relative;
+   z-index: 10;
+}
+
+.text h2 {
+    font-size: 5em;
+    font-weight: 800;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.text h3 {
+    font-size: 4em;
+    font-weight: 700;
+    line-height: 1em;
+}
+
+.text p {
+    font-size: 1.1em;
+    font-weight: 400;
+    margin: 20px 0;
+    max-width: 800px;
+}
+
+.text a {
+    display: inline-block;
+    font-size: 1.1em;
+    background: rgb(255, 255, 255);
+    padding: 10px 10px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing:2px;
+    transition: 0.2s;
+}
+
+.text a:hover{
+   letter-spacing: 6px;
+   color: purple;
+}
+
+.social {
+    position: absolute;
+    bottom: 20px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social li {
+    list-style: none;
+}
+
+.social li a {
+    display: inline-block;
+    transition: 0.5s;
+    margin-right: 20px;
+    transform: scale(0.5)
+}
+
+.social li a:hover {
+    transform: scale(0.5) translate(-15px);
+}
+
+.menu {
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu ul {
+    position: relative;
+    list-style: none;
+    text-align: justify;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+}
+
+.menu ul li a:hover {
+    color: purple;
+}
+@media (max-width:798px) {
+    .showcase {
+        flex-direction: column;
+        padding: 40px;
+    }
+
+    .showcase header {
+        padding: 40px;
+    }
+
+    .text h2 {
+        font-size: 3em;
+    }
+
+    .text h3 {
+        font-size: 2em;
+    }
+}
+
+ 
+* {
+    box-sizing: border-box; 
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    font-family: 'DM Serif Display', serif;
+    line-height: 1.6;
+    place-items: center;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-container {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(102, 8, 110, 0.1);
+    text-align: center;
+   
+   
+}
+
+.card-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: cover;
+    z-index: -1;
+}
+
+.card-profile-pic {
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid rgb(0, 0, 0);
+    margin-bottom: 20px;
+   
+}
+
+.profile-main {
+    font-size: 1.25em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.card-profile-name {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    align-items: center;
+    position: center;
+    color: rgb(241, 173, 255);
+}
+
+.card-profile-bio {
+    color: rgb(240, 173, 253);
+    font-size: 1.5em;
+    margin: 5px 0 10px;
+    line-height: 2em;
+    align-items: center;
+}
+
+.card-profile-description {
+    text-align: left;
+    line-height: 1.5;
+    font-size: 1.1em;
+    color: rgb(0, 0, 0);
+}
+
+
+.description-box {
+    background-color: rgb(255, 207, 251);
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.description-box1 {
+    background-color: rgb(255, 207, 251);
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.back-button {
+    display: inline-block;
+    font-size: 1.1em;
+    background: rgb(255, 255, 255);
+    padding: 10px 10px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing:2px;
+    transition: 0.2s;
+    bottom: 20px;
+    left: 50%;
+}
+
+.back-button:hover {
+    letter-spacing: 6px;
+    color: purple;
+
+}
+
+
+.body {
+    background-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    font-family: 'DM Serif Display', serif;
+    line-height: 1.6;
+    place-items: center;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel {
+   width: 100%;
+   overflow: hidden;
+   background-color: rgb(230, 148, 255);
+   padding: 20px 0;
+   margin-top: 150px;
+}
+
+.quotes {
+    text-align: center;
+    font-size: 3em;
+    font-weight: 700;
+    color: rgb(252, 213, 255);
+    margin-top: 20px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);   
+}
+
+.groups {
+    flex: 0 0 auto;
+    width: 390px;
+    height: 350px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 254, 254);
+    font-weight: bold;
+    font-size: 1.5em;
+    border-radius: 20px;
+    margin: 0 1px;
+    text-align: center;
+}
+
+.group {
+    display: flex;
+    width: max-content;
+    animation: scroll 25s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.carousel:hover .group {
+    animation-play-state: paused;
+}
+
+.back-button1 {
+    display: inline-block;
+    font-size: 1.1em;
+    background: rgb(255, 255, 255);
+    padding: 10px 10px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing:2px;
+    transition: 0.2s;
+    
+}
+
+.back-button1:hover {
+    letter-spacing: 6px;
+    color: purple;
+}
+
+.container {
+    background: linear-gradient(135deg, rgb(212, 67, 200), rgb(61, 55, 61));
+    padding: 10px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.todo-app h2{
+    color: rgb(0, 0, 0);  
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 image {
+    width: 400px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    gap: 10px;
+    
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+.todo-app input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+   
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ffb3f2;
+    color: #000000;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+.todo-app ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+.todo-app ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: none;
+    background-image: url(Nya-awrts/uncheck-all-icon.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul li.checked {
+    color: #000000;
+    text-decoration: line-through;
+}
+ul li.checked::before {
+     background-image: url(Nya-awrts/selecting-all-checkmark-icon.png);
+}
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #310029;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover {
+    background:rgb(245, 193, 255) ;
+}

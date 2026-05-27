@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html Lang="en">
+   <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title> Nya Awrts </title>   
+   </head>
+   <body>
+      <section class="showcase ">
+         <header>
+            <h2 class="logo"> Nya Awrts </h2> 
+             <img src="Nya-awrts/heart-white-icon.png"  style="width: 60px; height: 60px;">
+            <div class="toggle "></div>
+
+         </header>
+
+         <video src="Nya-awrts/CAT IBIS PAINT VID.mp4" muted autoplay loop></video>
+
+         <div class="overlay"></div>
+
+
+         <div class="text">
+            <h2> WELCOME TO NYAAWRTS </h2>
+            <h3> cat-inspired website </h3>
+            <p> Nya Nya Art is a cat-themed website focused on creativity and simple web design. It was created as a personal project to learn how websites are built using HTML, CSS, and JavaScript.
+
+               The design is inspired by cats, especially their cute and playful “nya” style. The website is not just about cats, but also about the process of building it and learning how to code.
+            </p>
+            <a href="newpage1.html"> informations </a>
+         </div>
+
+         <ul class="social">
+            <li><a href="https://www.tiktok.com/@goldfishmeow" target="_blank"><img src= "Nya-awrts/tiktok-simplified-white-icon.png" alt="" style="width: 70px; height: 70px;" </a></li> 
+            <li><a href="https://www.instagram.com/turtledashboard?igsh=MTF0cnNoZTIxaGdidg%3D%3D&utm_source=qr" target="_blank"><img src="Nya-awrts/instagram-white-icon.png" alt=""style="width: 70px; height: 70px;" </a></li>
+            <li><a href="https://www.threads.com/@april_nyaaa0_0?igshid=NTc4MTIwNjQ2YQ%3D%3D" target="_blank"><img src="Nya-awrts/threads-white-icon.png" alt="" style="width: 70px; height: 70px;" </a></li> 
+         </ul>
+      </section>
+
+      <button class="menu">
+           <ul>
+              <li><a href="newpage4.html"> Nya to-do lists  </a></li>
+              <li><a href="newpage5.html"> Nya Quotes </a></li>   
+           </ul> 
+      </button>
+
+      <script>
+        const menuToggle = document.querySelector('.toggle'); 
+        const showcase = document.querySelector('.showcase'); 
+
+         menuToggle.addEventListener('click', () => {
+          menuToggle.classList.toggle('active');
+          showcase.classList.toggle('active');
+         }); 
+      </script>
+   </body>
+</html>
