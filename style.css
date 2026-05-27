@@ -59,7 +59,7 @@
 
 
 .toggle.active {
-    background: url("Nya-awrts/home-button-white-icon.png") no-repeat center; 
+    background: url("home-button-white-icon.png") no-repeat center; 
     background-size: 30px;
     background-position: center;
 }
@@ -484,7 +484,7 @@ button{
     height: 28px;
     width: 28px;
     border-radius: none;
-    background-image: url(Nya-awrts/uncheck-all-icon.png);
+    background-image: url(uncheck-all-icon.png);
     background-size: cover;
     background-position: center;
     top: 12px;
@@ -495,7 +495,7 @@ ul li.checked {
     text-decoration: line-through;
 }
 ul li.checked::before {
-     background-image: url(Nya-awrts/selecting-all-checkmark-icon.png);
+     background-image: url(selecting-all-checkmark-icon.png);
 }
 ul li span {
     position: absolute;
